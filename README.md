@@ -21,6 +21,13 @@ Format file.
 panfanyi replaces the strings in `StringTable.xml` with their translated
 counterparts in `fanyi.ini`.
 
+### Contributing
+
+Pull requests with translation improvements or new languages are welcome!
+
+Just fork this repository and commit your changes to `fanyi.ini`, then submit a
+pull request.
+
 ### Arguments
 
 Argument       | Description
