@@ -2,10 +2,11 @@
 using OpenMcdf;
 using System;
 using System.IO;
+using System.Linq;
+using System.Net;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Xml.Linq;
-using System.Net;
 
 namespace panfanyi
 {
@@ -34,7 +35,7 @@ namespace panfanyi
     {
         static void Main(string[] args)
         {
-
+            bool updating = false;
             int index;
             string lang;
             string installDir;
@@ -52,15 +53,39 @@ namespace panfanyi
   | Mozilla Public License 2.0 (MPL-2.0)        |
   `---------------------------------------------'
 ");
+            if ( !File.Exists(fanyi) ) {
+                Console.Write("fanyi.ini is missing! Download the latest copy? [y/n] ");
+                string input = Console.ReadLine().Trim().ToLowerInvariant();
 
-            if ( (index = Array.IndexOf(args, "-update")) != -1 ) {
-                using ( var wc = new WebClient()) {
+                if ( !string.IsNullOrEmpty(input)
+                    && new[] { "yes", "y" }.Contains(input) ) {
+                    updating = true;
+                } else {
+                    Console.Write("\nCancelled by user! Press any key to continue... ");
+                    Console.ReadKey(true);
+                    return;
+                }
+            } else {
+                updating = Array.IndexOf(args, "-update") != -1;
+            }
+
+            if ( updating ) {
+                using ( var wc = new WebClient() ) {
                     string part = fanyi + ".part";
 
                     Console.WriteLine("Downloading latest fanyi.ini...");
-                    wc.DownloadFile(
-                        "https://raw.githubusercontent.com/zeffy/panfanyi/master/panfanyi/fanyi.ini",
-                        part);
+                    try {
+                        wc.DownloadFile(
+  "https://raw.githubusercontent.com/zeffy/panfanyi/master/panfanyi/fanyi.ini",
+  part);
+                    } catch (WebException) {
+                        Console.WriteLine("Downloading failed!\n\n" +
+                            "You can download it manually from https://git.io/fAdsf");
+
+                        Console.Write("\nPress any key to continue... ");
+                        Console.ReadKey(true);
+                        return;
+                    }
                     File.Copy(fanyi, fanyi + DateTime.Now.ToString("_yyyy-MM-dd_HH-mm-ss.bak"));
                     File.Move(part, fanyi);
                     Console.Write("\nDone! Press any key to continue... ");
@@ -104,13 +129,12 @@ namespace panfanyi
 
                 CFStream cfs = cf.RootStorage.GetStream("StringTable.xml");
                 XDocument xd = XDocument.Parse(Encoding.UTF8.GetString(cfs.GetData()));
-                string xlang;
                 string bakfile;
                 StringBuilder sb;
                 string id;
 
                 if ( Array.IndexOf(args, "-x") != -1 ) {
-                    Console.WriteLine("Writing cn string table to fanyi.ini...");
+                    Console.WriteLine("Extracting cn string table to fanyi.ini...");
                     foreach ( var element in xd.Root.Elements("String") ) {
                         if ( !NativeMethods.WritePrivateProfileString("cn",
                             (string)element.Attribute("id"),
