@@ -21,7 +21,7 @@ Argument       | Description
 `-update`      | Updates to the latest `panyi.ini` in this repository. Your old copy will be backed up.
 `-file [path]` | Optional path to `resource.db`. If unspecified, panfanyi will use the registry to find `resource.db`.
 `-lang [lang]` | Optional language from `panyi.ini` that you want to translate to. Defaults to `en`.
-`-x [lang]`    | Extracts the current string table in `StringTable.xml` to your `panyi.ini` under the specified section. Defaults to `cn`.
+`-x`           | Extracts the current string table in `StringTable.xml` to your `panyi.ini` under the `cn` section.
 
 ### Acknowledgements
 
