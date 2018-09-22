@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Xml.Linq;
 
-namespace panfanyi
+namespace panyi
 {
     class NativeMethods
     {
@@ -40,11 +40,11 @@ namespace panfanyi
             string lang;
             string installDir;
             string file;
-            string fanyi = Path.GetFullPath("fanyi.ini");
+            string config = Path.GetFullPath("panyi.ini");
 
             Console.WriteLine(
 @",-------------------------------------------------.
-| panfanyi 1.0                                    |
+| panyi 1.1                                       |
 | Copyright 2018 zeffy <https://github.com/zeffy> |
 | Simple Understanding Public License v1 (SUPL)   |
  `+---------------------------------------------+-'
@@ -53,8 +53,8 @@ namespace panfanyi
   | Mozilla Public License 2.0 (MPL-2.0)        |
   `---------------------------------------------'
 ");
-            if ( !File.Exists(fanyi) ) {
-                Console.Write("fanyi.ini is missing! Download the latest copy? [y/n] ");
+            if ( !File.Exists(config) ) {
+                Console.Write("panyi.ini is missing! Download the latest copy? [y/n] ");
                 string input = Console.ReadLine().Trim().ToLowerInvariant();
 
                 if ( !string.IsNullOrEmpty(input)
@@ -71,24 +71,24 @@ namespace panfanyi
 
             if ( updating ) {
                 using ( var wc = new WebClient() ) {
-                    string part = fanyi + ".part";
+                    string part = config + ".part";
 
-                    Console.WriteLine("Downloading latest fanyi.ini...");
+                    Console.WriteLine("Downloading latest panyi.ini...");
                     try {
                         wc.DownloadFile(
-  "https://raw.githubusercontent.com/zeffy/panfanyi/master/panfanyi/fanyi.ini",
+  "https://raw.githubusercontent.com/zeffy/panyi/master/panyi/panyi.ini",
   part);
                     } catch ( WebException ) {
                         Console.WriteLine("Downloading failed!\n\n" +
-                            "You can download it manually from https://git.io/fAdsf");
+                            "You can download it manually from https://git.io/fAdWN");
 
                         Console.Write("\nPress any key to continue... ");
                         Console.ReadKey(true);
                         return;
                     }
-                    if ( File.Exists(fanyi) )
-                        File.Copy(fanyi, fanyi + DateTime.Now.ToString("_yyyy-MM-dd_HH-mm-ss.bak"));
-                    File.Move(part, fanyi);
+                    if ( File.Exists(config) )
+                        File.Copy(config, config + DateTime.Now.ToString("_yyyy-MM-dd_HH-mm-ss.bak"));
+                    File.Move(part, config);
                     Console.Write("\nDone! Press any key to continue... ");
                     Console.ReadKey(true);
                     return;
@@ -135,12 +135,12 @@ namespace panfanyi
                 string id;
 
                 if ( Array.IndexOf(args, "-x") != -1 ) {
-                    Console.WriteLine("Extracting cn string table to fanyi.ini...");
+                    Console.WriteLine("Extracting cn string table to panyi.ini...");
                     foreach ( var element in xd.Root.Elements("String") ) {
                         if ( !NativeMethods.WritePrivateProfileString("cn",
                             (string)element.Attribute("id"),
                             (string)element.Attribute("value"),
-                            fanyi) ) {
+                            config) ) {
 
                             Console.WriteLine("Failed to write string!");
                         }
@@ -158,7 +158,7 @@ namespace panfanyi
                 sb = new StringBuilder(0x200);
                 foreach ( var element in xd.Root.Elements("String") ) {
                     id = (string)element.Attribute("id");
-                    if ( NativeMethods.GetPrivateProfileString(lang, id, "", sb, (uint)sb.MaxCapacity, fanyi) > 0 )
+                    if ( NativeMethods.GetPrivateProfileString(lang, id, "", sb, (uint)sb.MaxCapacity, config) > 0 )
                         element.Attribute("value").SetValue(sb.ToString());
                 }
                 cfs.SetData(Encoding.UTF8.GetBytes(xd.ToString()));
