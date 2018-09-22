@@ -78,7 +78,7 @@ namespace panfanyi
                         wc.DownloadFile(
   "https://raw.githubusercontent.com/zeffy/panfanyi/master/panfanyi/fanyi.ini",
   part);
-                    } catch (WebException) {
+                    } catch ( WebException ) {
                         Console.WriteLine("Downloading failed!\n\n" +
                             "You can download it manually from https://git.io/fAdsf");
 
@@ -86,7 +86,8 @@ namespace panfanyi
                         Console.ReadKey(true);
                         return;
                     }
-                    File.Copy(fanyi, fanyi + DateTime.Now.ToString("_yyyy-MM-dd_HH-mm-ss.bak"));
+                    if ( File.Exists(fanyi) )
+                        File.Copy(fanyi, fanyi + DateTime.Now.ToString("_yyyy-MM-dd_HH-mm-ss.bak"));
                     File.Move(part, fanyi);
                     Console.Write("\nDone! Press any key to continue... ");
                     Console.ReadKey(true);
