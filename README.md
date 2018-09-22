@@ -11,15 +11,15 @@ Otherwise, refer to the **Arguments** section below.
 
 ### How it works
 
-panfanyi uses `fanyi.ini` which is a collection of translations in different
-languages for the string table resources used by the Baidu Netdisk application.
+panfanyi uses the collection of translationed strings in `fanyi.ini` to replace
+the string resources used by Baidu Netdisk.
 
-Baidu Netdisk uses a string table located in `StringTable.xml`, which is stored
-inside `%AppData%\baidu\BaiduNetdisk\resource.db`, a Compound File Binary
+Baidu Netdisk reads its strings from `StringTable.xml`, a file stored inside
+`%AppData%\baidu\BaiduNetdisk\resource.db`, which is a Compound File Binary
 Format file.
 
-panfanyi replaces the strings in `StringTable.xml` with their respective
-translations in `fanyi.ini`.
+panfanyi replaces the strings in `StringTable.xml` with their translated
+counterparts in `fanyi.ini`.
 
 ### Arguments
 
