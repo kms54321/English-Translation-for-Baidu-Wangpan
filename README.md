@@ -2,7 +2,7 @@
 
 Translate Baidu Netdisk (Wangpan) for Windows to other languages.
 
-## How to use
+### How to use
 
 If you simply want to translate Baidu Netdisk to English, just download and run
 `panfanyi.exe`. 
