@@ -110,10 +110,11 @@ namespace panfanyi
                 string id;
 
                 if ( Array.IndexOf(args, "-x") != -1 ) {
-                    if ( ++index >= args.Length )
-                        return;
+                    if ( ++index < args.Length && args[index][0] != '-' )
+                        xlang = args[index];
+                    else
+                        xlang = "cn";
 
-                    xlang = args[index];
                     Console.WriteLine("Writing current string table to fanyi.ini...");
                     foreach ( var element in xd.Root.Elements("String") ) {
                         if ( !NativeMethods.WritePrivateProfileString(xlang,
