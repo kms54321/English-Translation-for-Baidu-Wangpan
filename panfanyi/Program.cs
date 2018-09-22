@@ -104,17 +104,25 @@ namespace panfanyi
 
                 CFStream cfs = cf.RootStorage.GetStream("StringTable.xml");
                 XDocument xd = XDocument.Parse(Encoding.UTF8.GetString(cfs.GetData()));
+                string xlang;
                 string bakfile;
                 StringBuilder sb;
                 string id;
 
                 if ( Array.IndexOf(args, "-x") != -1 ) {
+                    if ( ++index >= args.Length )
+                        return;
+
+                    xlang = args[index];
                     Console.WriteLine("Writing current string table to fanyi.ini...");
                     foreach ( var element in xd.Root.Elements("String") ) {
-                        NativeMethods.WritePrivateProfileString("cn",
+                        if ( !NativeMethods.WritePrivateProfileString(xlang,
                             (string)element.Attribute("id"),
                             (string)element.Attribute("value"),
-                            fanyi);
+                            fanyi) ) {
+
+                            Console.WriteLine("Failed to write string!");
+                        }
                     }
                     Console.Write("\nDone! Press any key to continue... ");
                     Console.ReadKey(true);
