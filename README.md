@@ -1,7 +1,6 @@
 ﻿## panfanyi
 
-Translate the [Baidu Netdisk （百度网盘）][pan] Windows application to other
-languages.
+Translate Baidu Netdisk (Wangpan) for Windows to other languages.
 
 ### How it works
 
