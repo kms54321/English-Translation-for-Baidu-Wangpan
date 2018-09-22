@@ -2,7 +2,7 @@
 using System.Runtime.InteropServices;
 
 [assembly: AssemblyTitle("panfanyi")]
-[assembly: AssemblyDescription("Translate Baidu Netdisk for Windows to other languages")]
+[assembly: AssemblyDescription("Translate Baidu Netdisk (Wangpan) to other languages")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("panfanyi")]
