@@ -39,6 +39,7 @@ namespace panyi
             int index;
             string lang;
             string installDir;
+            string bakfile;
             string file;
             string config = Path.GetFullPath("panyi.ini");
 
@@ -61,7 +62,7 @@ namespace panyi
                     && new[] { "yes", "y" }.Contains(input) ) {
                     updating = true;
                 } else {
-                    Console.Write("\nCancelled by user! Press any key to continue... ");
+                    Console.Write("\nCancelled by user! Press any key to exit... ");
                     Console.ReadKey(true);
                     return;
                 }
@@ -73,23 +74,28 @@ namespace panyi
                 using ( var wc = new WebClient() ) {
                     string part = config + ".part";
 
-                    Console.WriteLine("Downloading latest panyi.ini...");
+                    Console.Write("Downloading latest panyi.ini... ");
                     try {
                         wc.DownloadFile(
   "https://raw.githubusercontent.com/zeffy/panyi/master/panyi/panyi.ini",
   part);
+                        Console.WriteLine("Finished!\n");
                     } catch ( WebException ) {
-                        Console.WriteLine("Downloading failed!\n\n" +
+                        Console.WriteLine("Failed!\n\n" +
                             "You can download it manually from https://git.io/fAdWN");
 
-                        Console.Write("\nPress any key to continue... ");
+                        Console.Write("\nPress any key to exit... ");
                         Console.ReadKey(true);
                         return;
                     }
-                    if ( File.Exists(config) )
-                        File.Copy(config, config + DateTime.Now.ToString("_yyyy-MM-dd_HH-mm-ss.bak"));
+                    if ( File.Exists(config) ) {
+                        bakfile = config + DateTime.Now.ToString("_yyyy-MM-dd_HH-mm-ss.bak");
+                        File.Copy(config, bakfile);
+
+                        Console.WriteLine("Copied old panyi.ini to \"{0}\"", bakfile);
+                    }
                     File.Move(part, config);
-                    Console.Write("\nDone! Press any key to continue... ");
+                    Console.Write("\nDone! Press any key to exit... ");
                     Console.ReadKey(true);
                     return;
                 }
@@ -130,8 +136,6 @@ namespace panyi
 
                 CFStream cfs = cf.RootStorage.GetStream("StringTable.xml");
                 XDocument xd = XDocument.Parse(Encoding.UTF8.GetString(cfs.GetData()));
-                string bakfile;
-                StringBuilder sb;
                 string id;
 
                 if ( Array.IndexOf(args, "-x") != -1 ) {
@@ -140,32 +144,28 @@ namespace panyi
                         if ( !NativeMethods.WritePrivateProfileString("cn",
                             (string)element.Attribute("id"),
                             (string)element.Attribute("value"),
-                            config) ) {
-
+                            config) )
                             Console.WriteLine("Failed to write string!");
-                        }
                     }
-                    Console.Write("\nDone! Press any key to continue... ");
-                    Console.ReadKey(true);
-                    return;
-                }
+                } else {
+                    bakfile = file + DateTime.Now.ToString("_yyyy-MM-dd_HH-mm-ss.bak");
+                    File.Copy(file, bakfile);
+                    Console.WriteLine("Copied old resource.db to \"{0}\"", bakfile);
 
-                bakfile = file + DateTime.Now.ToString("_yyyy-MM-dd_HH-mm-ss.bak");
-                File.Copy(file, bakfile);
-                Console.WriteLine("Copied old resource.db to \"{0}\"", bakfile);
-
-                Console.WriteLine("Translating string table to {0}...", lang);
-                sb = new StringBuilder(0x200);
-                foreach ( var element in xd.Root.Elements("String") ) {
-                    id = (string)element.Attribute("id");
-                    if ( NativeMethods.GetPrivateProfileString(lang, id, "", sb, (uint)sb.MaxCapacity, config) > 0 )
-                        element.Attribute("value").SetValue(sb.ToString());
+                    Console.WriteLine("Translating string table to {0}...", lang);
+                    var sb = new StringBuilder(0x200);
+                    foreach ( var element in xd.Root.Elements("String") ) {
+                        id = (string)element.Attribute("id");
+                        if ( NativeMethods.GetPrivateProfileString(lang, id, "", sb, (uint)sb.MaxCapacity, config) > 0 )
+                            element.Attribute("value").SetValue(sb.ToString());
+                    }
+                    cfs.SetData(Encoding.UTF8.GetBytes(xd.ToString()));
+                    cf.Commit(true);
                 }
-                cfs.SetData(Encoding.UTF8.GetBytes(xd.ToString()));
-                cf.Commit(true);
-                Console.Write("\nDone! Press any key to continue... ");
-                Console.ReadKey(true);
             }
+            Console.Write("\nDone! Press any key to exit... ");
+            Console.ReadKey(true);
+            return;
         }
     }
 }
