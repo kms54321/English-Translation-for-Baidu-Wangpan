@@ -1,6 +1,7 @@
 Baidu Netdisk / Cloud app English translation files
 
-This fork is for the sole purpose of distributing updates for the panyi.ini and DuiStringTable.xml files
+Thanks to zeffy for his/her panyi.exe, which simplifies the process of inserting translations.
+This fork is for the purpose of distributing updates for the panyi.ini and DuiStringTable.xml files. 
 
 Instructions
 
