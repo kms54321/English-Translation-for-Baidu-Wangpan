@@ -1,5 +1,8 @@
 Baidu Netdisk / Cloud app English translation files
 
+It's far from perfect: the layout is screwey in places, and as the translations are from google, they are also somewhat screwey in places. 
+But it's definitely functional.
+
 Thanks to zeffy for his/her panyi.exe, which simplifies the process of inserting translations.
 This fork is for the purpose of distributing updates for the panyi.ini and DuiStringTable.xml files. 
 
