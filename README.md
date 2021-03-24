@@ -11,6 +11,7 @@ Instructions
  - run panyi.exe
  - copy DuiStringTable.xml to \AppData\Roaming\baidu\BaiduNetdisk\skin
  - open duiengineskin.zip
+ - go to the xml directory
  - replace the DuiStringTable.xml file in the zip archive with the downloaded english version
 
 Current as of Mar 24 2021
