@@ -62,7 +62,7 @@
   <s id="1212">Quickly clean up%s ~</s>
   <s id="1213">View all</s>
   <s id="1214">Too many scans, try again tomorrow</s>
-  <s id="1215"></s>
+  <s id="1215"> </s>
   <s id="1216">Please activate super member</s>
   <s id="1217">Operation too frequent, please try again later</s>
   <s id="1218">Server error, please try again later</s>
@@ -213,7 +213,7 @@
   <s id="1440">%.1f seconds</s>
   <s id="1441">No subtitles</s>
   <s id="1442">Getting subtitles</s>
-  <s id="1443"></s>
+  <s id="1443"> </s>
   <s id="1444">Failed to get subtitles</s>
   <s id="1445">Setting captions</s>
   <s id="1446">Subtitles set successfully</s>
@@ -313,7 +313,6 @@
   <s id="1541">Member to:</s>
   <s id="1542">Member center</s>
   <s id="1543">File export</s>
-  <s id="1544">Lost privilege for %d days</s>
   <s id="1545">Expires in %d days and will lose 21 privileges</s>
   <s id="1546">Expires in %d days and will lose 31 privileges</s>
   <s id="1547">Regain 31 privileges of super member</s>
@@ -324,6 +323,13 @@
   <s id="1552">Working package to:</s>
   <s id="1553">Enterprise Certification</s>
   <s id="1554">Enterprise Details</s>
+  <s id="1555">expired</s>
+  <s id="1556">Go to the game center></s>
+  <s id="1557">Enterprise space is online~</s>
+  <s id="1558">Click to switch space, experience immediately!</s>
+  <s id="1559">I see</s>
+  <s id="1561">Backup package to:</s>
+  <s id="1562">Entertainment package to:</s>
   <s id="16">Retry</s>
   <s id="1600">Welcome to baidu netdisk</s>
   <s id="1650">Home</s>
@@ -615,9 +621,9 @@
   <s id="2406">Speedometer</s>
   <s id="2407">User reward program</s>
   <s id="2408">Participated in user rewards program</s>
-  <s id="2409">%.1f hours</s>
-  <s id="2410">99 hours</s>
-  <s id="2411">0 hours</s>
+#ERROR!
+#NAME?
+#ERROR!
   <s id="25">Clear</s>
   <s id="250">Shut down</s>
   <s id="2500">Are you sure you want to delete%s?</s>
@@ -741,7 +747,7 @@
   <s id="2920">Web page</s>
   <s id="2921">View more in catalog</s>
   <s id="2922">No recently used files ~</s>
-  <s id="2923">ipad</s>
+  <s id="2923">iPad</s>
   <s id="2924">Wechat mini program</s>
   <s id="2925">Clear record failed</s>
   <s id="2926">Clear log file failed</s>
@@ -927,7 +933,7 @@
   <s id="3534">Unlimited membership backup></s>
   <s id="3535">Folder backed up (%d/5)</s>
   <s id="3536">View backup progress></s>
-  <s id="3537">Add backup folder</s>
+#NAME?
   <s id="3538">(Save latest 100 document versions)</s>
   <s id="3539">Dear member, you can enjoy unlimited folder automatic backup</s>
   <s id="354">Creating group</s>
@@ -1119,6 +1125,8 @@
   <s id="4088">Paper check</s>
   <s id="4089">Multi-brand safe, accurate, fast and low price</s>
   <s id="409">There a small problem</s>
+  <s id="4090">game Center</s>
+  <s id="4091">Popular games selection</s>
   <s id="41">Clear all</s>
   <s id="410">Please log in again</s>
   <s id="4100">File cleanup</s>
@@ -1133,6 +1141,7 @@
   <s id="4132">Purchase accelerated coupons</s>
   <s id="4133">Purchase a free download card</s>
   <s id="4134">Purchase membership</s>
+  <s id="4135">Select friends</s>
   <s id="414">User does not exist</s>
   <s id="4140">Turn on now</s>
   <s id="4141">Wechat backup</s>
@@ -1367,6 +1376,10 @@
   <s id="4557">Enjoy 11 privileges of work package</s>
   <s id="4558">Renewal work package</s>
   <s id="4559">What can be done?</s>
+  <s id="4560">3T space</s>
+  <s id="4561">Phone backup</s>
+  <s id="4562">Recycle Bin for 15 days</s>
+  <s id="4564">High-speed playback</s>
   <s id="4600">Add network disk file</s>
   <s id="4601">Copy to network disk</s>
   <s id="4602">View local location</s>
@@ -1440,6 +1453,7 @@
   <s id="4756">Restore files</s>
   <s id="4757">Move files</s>
   <s id="4758">Delete Files</s>
+  <s id="4759">Clear from recycle bin</s>
   <s id="4760">Rename</s>
   <s id="4761">At this stage, only %d operation records are supported~</s>
   <s id="4762">Load failed, click</s>
@@ -1451,6 +1465,7 @@
   <s id="4769">Open error folder</s>
   <s id="4770">Sync path error</s>
   <s id="4771">Native</s>
+  <s id="4772">Restore historical files</s>
   <s id="4801">The file is too large, exceeding the %dG upload size limit</s>
   <s id="4802">The file is too large, the member supports uploading the largest %dG file</s>
   <s id="4803">The file is too large, non-members support uploading the largest %dG file</s>
@@ -1468,6 +1483,8 @@
   <s id="4820">Workspace synchronization abnormal</s>
   <s id="4821">Failed to create the local synchronization path of the workspace! Please set a valid path in "Settings-Workspace-Change Synchronization Directory"!</s>
   <s id="4822">Local deletion failed, the file is occupied</s>
+  <s id="4823">The target location file already exists, the operation failed</s>
+  <s id="4824">The sync engine is invalid, please check the network status</s>
   <s id="4850">data migration</s>
   <s id="4851">Data is being migrated, please be patient...</s>
   <s id="4852">Data migration is successful</s>
@@ -1482,6 +1499,30 @@
   <s id="4901">Local workspace folder</s>
   <s id="4902">To start synchronization</s>
   <s id="4903">The file on the computer will also be deleted synchronously. Please operate with caution\r\nPrompt: The file is being deleted during synchronization. If the deletion fails, please try again later</s>
+  <s id="4950">Copy to "%s" corporate space</s>
+  <s id="4951">personal space</s>
+  <s id="4952">Ordinary space</s>
+  <s id="4953">Workspace</s>
+  <s id="4954">Corporate space</s>
+  <s id="4955">Space switching...</s>
+  <s id="4956">Switching failed, please try again</s>
+  <s id="4957">Folder creation failed!</s>
+  <s id="4958">Personal storage space: %s/%s</s>
+  <s id="4959">Enterprise storage space: %s/%s</s>
+  <s id="4960">hint</s>
+  <s id="4961">The current account is inconsistent with the web account, please confirm the account and upload again</s>
+  <s id="4962">I see</s>
+  <s id="4970">Online game center</s>
+  <s id="4980">Video double speed privilege: has been turned on for you</s>
+  <s id="4981">HD quality privilege: is switching to</s>
+  <s id="4982">Cloud unzip privilege</s>
+  <s id="4983">Upgrade to Super Member</s>
+  <s id="4984">fold</s>
+  <s id="4985">More</s>
+  <s id="4986">10 privileges of exclusive entertainment package</s>
+  <s id="4987">Enjoy 4 privileges of the backup package</s>
+  <s id="4988">Privileges for exclusive packages</s>
+  <s id="4989">Dear Baidu network disk user, you are enjoying the privilege of cloud decompression..</s>
   <s id="5">Scan qr code to install latest android version of baidu skydrive</s>
   <s id="500">Determine</s>
   <s id="501">Cancel</s>
