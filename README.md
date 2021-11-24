@@ -17,4 +17,4 @@ Instructions
  - go to the xml directory
  - replace the DuiStringTable.xml file in the zip archive with the downloaded english version
 
-Current as of Sep 12 2021
+Current as of Nov 23 2021
