@@ -23,21 +23,15 @@ Current as of Mar 4 2022
 Instructions for panyi.exe from zeffy
 --------------------------------------
 
-How it works
 Baidu Netdisk reads its strings from %AppData%\baidu\BaiduNetdisk\resource.db:StringTable.xml, a Compound File Binary Format stream.
 
 panyi simply replaces these strings with their translated counterparts from panyi.ini.
 
 Arguments
-Argument	Description
 -update	Downloads the latest panyi.ini from this repository. Your old copy will be backed up.
 -file [path]	Optional path to resource.db. If unspecified, panyi will use the registry to find resource.db.
 -lang [lang]	Optional language from panyi.ini that you want to translate to. Defaults to en.
 -x	Extracts StringTable.xml strings to your panyi.ini's cn section.
-Contributing
-Pull requests with translation improvements or new languages are welcome!
-
-Just fork this repository and commit your changes to panyi.ini, then submit a pull request.
 
 Acknowledgements
 Project	Version	Copyright	License
