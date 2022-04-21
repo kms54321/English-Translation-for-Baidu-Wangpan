@@ -19,15 +19,29 @@ Instructions
 
 Current as of Mar 4 2022
 
---------------------------------------
-Instructions for panyi.exe from zeffy
---------------------------------------
-
-Baidu Netdisk reads its strings from %AppData%\baidu\BaiduNetdisk\resource.db:StringTable.xml, a Compound File Binary Format stream.
-
-panyi simply replaces these strings with their translated counterparts from panyi.ini.
-
-  -update	Downloads the latest panyi.ini from this repository. Your old copy will be backed up.
-  -file [path]	Optional path to resource.db. If unspecified, panyi will use the registry to find resource.db.
-  -lang [lang]	Optional language from panyi.ini that you want to translate to. Defaults to en.
-  -x	Extracts StringTable.xml strings to your panyi.ini's cn section.
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-update</code></td>
+<td>Downloads the latest <code>panyi.ini</code> from this repository. Your old copy will be backed up.</td>
+</tr>
+<tr>
+<td><code>-file [path]</code></td>
+<td>Optional path to <code>resource.db</code>. If unspecified, panyi will use the registry to find <code>resource.db</code>.</td>
+</tr>
+<tr>
+<td><code>-lang [lang]</code></td>
+<td>Optional language from <code>panyi.ini</code> that you want to translate to. Defaults to <code>en</code>.</td>
+</tr>
+<tr>
+<td><code>-x</code></td>
+<td>Extracts <code>StringTable.xml</code> strings to your <code>panyi.ini</code>'s <code>cn</code> section.</td>
+</tr>
+</tbody>
+</table>
