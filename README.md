@@ -27,7 +27,12 @@ Baidu Netdisk reads its strings from %AppData%\baidu\BaiduNetdisk\resource.db:St
 
 panyi simply replaces these strings with their translated counterparts from panyi.ini.
 
-Arguments
+Arguments:
+skin
+openskin
+openskin
+openskin
+open
   -update	Downloads the latest panyi.ini from this repository. Your old copy will be backed up.
   -file [path]	Optional path to resource.db. If unspecified, panyi will use the registry to find resource.db.
   -lang [lang]	Optional language from panyi.ini that you want to translate to. Defaults to en.
