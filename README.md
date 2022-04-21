@@ -28,11 +28,7 @@ Baidu Netdisk reads its strings from %AppData%\baidu\BaiduNetdisk\resource.db:St
 panyi simply replaces these strings with their translated counterparts from panyi.ini.
 
 Arguments
--update	Downloads the latest panyi.ini from this repository. Your old copy will be backed up.
--file [path]	Optional path to resource.db. If unspecified, panyi will use the registry to find resource.db.
--lang [lang]	Optional language from panyi.ini that you want to translate to. Defaults to en.
--x	Extracts StringTable.xml strings to your panyi.ini's cn section.
-
-Acknowledgements
-Project	Version	Copyright	License
-OpenMcdf	2.1	Copyright © 2010-2018, Federico Blaseotto	MPL-2.0
+  -update	Downloads the latest panyi.ini from this repository. Your old copy will be backed up.
+  -file [path]	Optional path to resource.db. If unspecified, panyi will use the registry to find resource.db.
+  -lang [lang]	Optional language from panyi.ini that you want to translate to. Defaults to en.
+  -x	Extracts StringTable.xml strings to your panyi.ini's cn section.
