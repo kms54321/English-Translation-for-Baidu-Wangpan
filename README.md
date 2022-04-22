@@ -1,7 +1,6 @@
-Baidu Netdisk / Cloud app English translation files
+English Translation for Baidu Wangpan 百度网盘
 
-It's far from perfect: the layout is screwy in places, and as the translations are from google, they are also somewhat screwy. 
-But it's definitely functional.
+It's far from perfect, but it's definitely functional.
 
 Thanks to zeffy for his/her panyi.exe, which simplifies the process of inserting translations. Unfortunately zeffy's repo no longer exists, so I've posted panyi.exe and its instructions here. 
 
