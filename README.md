@@ -1,6 +1,8 @@
 English Translation for Baidu Wangpan 百度网盘
 
-It's far from perfect, but it's definitely functional. Instructions:
+Baidu offers 2TB of free storage, with some significant drawbacks. Downloads are slow, and the desktop client has no English version.
+
+This repo provides a solution. It's far from perfect, but still definitely functional. Instructions:
 
  - download and install Baidu Netdisk ==> here's one guide in English https://www.baiduinenglish.com/baiduyun-pan-baidu-cloud-wangpan-disk.html
  - download panyi.exe, panyi.ini and DuiStringTable.xml
