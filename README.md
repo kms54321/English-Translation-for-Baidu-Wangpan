@@ -39,10 +39,6 @@ Binary Format stream.</p>
 </thead>
 <tbody>
 <tr>
-<td><code>-update</code></td>
-<td>Downloads the latest <code>panyi.ini</code> from this repository. Your old copy will be backed up.</td>
-</tr>
-<tr>
 <td><code>-file [path]</code></td>
 <td>Optional path to <code>resource.db</code>. If unspecified, panyi will use the registry to find <code>resource.db</code>.</td>
 </tr>
