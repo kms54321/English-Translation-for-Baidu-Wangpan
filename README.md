@@ -2,6 +2,7 @@ English Translation for Baidu Wangpan 百度网盘
 
 It's far from perfect, but it's definitely functional. Instructions:
 
+ - download and install Baidu Netdisk ==> here's one guide in English https://www.baiduinenglish.com/baiduyun-pan-baidu-cloud-wangpan-disk.html
  - download panyi.exe, panyi.ini and DuiStringTable.xml
  - copy panyi.exe and panyi.ini to \AppData\Roaming\baidu\BaiduNetdisk
  - run panyi.exe
