@@ -21,7 +21,7 @@ Thanks to zeffy for his/her/their panyi.exe, which simplifies the process of ins
 
 -------------------------------------------------
 <article class="markdown-body entry-content container-lg" itemprop="text"><h2><a id="user-content-panyi" class="anchor" aria-hidden="true" href="#panyi"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>panyi</h2>
-<p>Translate <a href="https://web.archive.org/web/20200621191051/https://pan.baidu.com/" rel="nofollow">Baidu Wangpan</a> (Netdisk) for Windows to other languages.</p>
+<p>Translate <a href="https://pan.baidu.com/" rel="nofollow">Baidu Wangpan</a> (Netdisk) for Windows to other languages.</p>
 <h3><a id="user-content-how-to-use" class="anchor" aria-hidden="true" href="#how-to-use"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>How to use</h3>
 <p>If you simply want to translate Baidu Netdisk to English, just download and run
 <code>panyi.exe</code>.</p>
@@ -71,10 +71,10 @@ pull request.</p>
 </thead>
 <tbody>
 <tr>
-<td><a href="https://web.archive.org/web/20200621191051/https://github.com/ironfede/openmcdf"><strong>OpenMcdf</strong></a></td>
+<td><a href="https://github.com/ironfede/openmcdf"><strong>OpenMcdf</strong></a></td>
 <td>2.1</td>
 <td>Copyright © 2010-2018, Federico Blaseotto</td>
-<td><a href="https://web.archive.org/web/20200621191051/https://github.com/ironfede/openmcdf/blob/master/License.txt">MPL-2.0</a></td>
+<td><a href="https://github.com/ironfede/openmcdf/blob/master/License.txt">MPL-2.0</a></td>
 </tr>
 </tbody>
 </table>
