@@ -4,7 +4,8 @@ Baidu offers 2TB of free storage, with some significant drawbacks. Downloads are
 
 This repo provides a solution. It's far from perfect, but still definitely functional. Instructions:
 
- - download and install Baidu Netdisk ==> here's one guide in English https://www.baiduinenglish.com/baiduyun-pan-baidu-cloud-wangpan-disk.html
+ - download and install Baidu Netdisk
+  - here's one guide in English https://www.baiduinenglish.com/baiduyun-pan-baidu-cloud-wangpan-disk.html
  - download panyi.exe, panyi.ini and DuiStringTable.xml
  - copy panyi.exe and panyi.ini to \AppData\Roaming\baidu\BaiduNetdisk
  - run panyi.exe
