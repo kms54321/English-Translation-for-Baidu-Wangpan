@@ -20,8 +20,8 @@ Instructions
 Current as of Mar 4 2022
 
 ---------------------------------------
- Instructions for panyi.exe from zeffy
----------------------------------------
+ Arguments for panyi.exe from zeffy
+
 <table>
 <thead>
 <tr>
